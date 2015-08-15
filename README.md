@@ -4,24 +4,22 @@ Knowledge Base for DevOps consultant: document, libraries, slides, etc.
 Link for current page: https://github.com/DennyZhang/devops-knowledgebase
 
 Characteristics Of DevOps Work:
-# Different projects/products usually have many similar requirements or overlapped tasks.
-# Most tasks are off the record and trivial in project planning, therefore hard to track effort for credit in-return
-# If we fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
-# All team members may contact with DevOps, so watch out low efficiency of communication.
+1. Different projects/products usually have many similar requirements or overlapped tasks.
+2. Most tasks are off the record and trivial in project planning, therefore hard to track effort for credit in-return
+3. If we fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
+4. All team members may contact with DevOps, so watch out low efficiency of communication.
 
-DevOps BusinessValue:
-https://bitbucket.org/oscdevops/devops_experience/src/master/BussinessValue.md?at=master
-
-DevOps TechStack:
-https://bitbucket.org/oscdevops/devops_experience/src/master/TechStack.md?at=master
-
-===============================================================
+| Name                                   | Comment                                                    |
+|:----------------------------------------|------------------------------------------------------------|
+| DevOps TechStack | https://github.com/DennyZhang/devops-knowledgebase/blob/master/TechStack.md |
+| DevOps BusinessValue | https://github.com/DennyZhang/devops-knowledgebase/blob/master/BussinessValue.md |
+| DevOps Consultant | https://github.com/DennyZhang/devops-knowledgebase/blob/master/CustomerConsultant.md |
 
 We maintain current JIRA story, in hope of:
-# Standardize routine work with minimum effort and maximum output.
-# Separate what tasks need intensive communication/prompt response from those tasks don't need.
-# Measure key tasks by statistics and generate visualize  report.
-# Figure out a way to keep things/tasks in order and properly tracked
+1. Standardize routine work with minimum effort and maximum output.
+2. Separate what tasks need intensive communication/prompt response from those tasks don't need.
+3. Measure key tasks by statistics and generate visualize  report.
+4. Figure out a way to keep things/tasks in order and properly tracked
 
 ## Requirement for DevOps members
 1. Interest
