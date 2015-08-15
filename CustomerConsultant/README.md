@@ -1,4 +1,4 @@
-How To Bill Customers Reasonable, when doing DevOps Consultant
+Bill Customers Reasonably For DevOps Consultant
 ==============================================================
 
 | Task                  | Category | Summary                                                                        |
