@@ -1,7 +1,7 @@
 Check nagios
 ============
 
-## === Nagios Link
+## Nagios GUI
 http://$nagios_server_ip:$nagios_server_port/nagios/
 ![](../images/nagios_gui.png)
 
