@@ -1,8 +1,13 @@
 Use ssh tunnel to access tcp port
 =================================
+```
+Let's say we want to visit port 27017 for 50.198.76.253.
 
-Suppose the ssh port of server is 32823. We want to access port 27017, which is not allowed by firewall.
+However this port is not opened by firewall, but ssh port(32823) is open
 
-Use below command, we can open http://localhost:27017. It would work exactly like http://$server_ip:27017
+We can use ssh tunnel to map server's port 27017 to local port 27017.
 
-ssh -N -p 32823 -f root@mdmlab -L 27017:localhost:27017 -n /bin/bash
+Thus when we open http://localhost:27017 in local web browser, it would work like http://50.198.76.253:27017
+
+ssh -N -p 32823 -f root@50.198.76.253 -L 27017:localhost:27017 -n /bin/bash
+```
