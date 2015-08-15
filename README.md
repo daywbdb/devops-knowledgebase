@@ -12,7 +12,7 @@ Characteristics Of DevOps Work:
 
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
-| DevOps TechStack | https://github.com/DennyZhang/devops-knowledgebase/blob/master/TechStack.md |
+| [DevOps TechStack](./TechStack.md) | Tech stack |
 | DevOps BusinessValue | https://github.com/DennyZhang/devops-knowledgebase/blob/master/BussinessValue.md |
 | DevOps Consultant | https://github.com/DennyZhang/devops-knowledgebase/blob/master/CustomerConsultant.md |
 
@@ -38,7 +38,6 @@ DevOps Role = quality engineers + automation engineers + Ops + Security
 4. Work model: Tools + Projects
 5. Set up internal hack days, where cross-functional teams can get together to work on a project.
 
-=======
 ## Long term goals
 1. People: Desire and ability
 2. Experience: Library and Service
