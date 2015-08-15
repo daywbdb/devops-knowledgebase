@@ -9,7 +9,7 @@ Characteristics Of DevOps Work:
 
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
-| [DevOps TechStack](./TechStack.md) | Tech stack people should be familiar with, when doing DevOps |
+| [DevOps TechStack](./TechStack) | Tech stack people should be familiar with, when doing DevOps |
 | [DevOps BusinessValue](./BusinessValue) | What business values do DevOps mean to customers |
 | [DevOps Consultant](./CustomerConsultant) | Experience for doing DevOps Consultant |
 
