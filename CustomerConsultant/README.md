@@ -2,7 +2,7 @@ How To Bill Customers Reasonable, when doing DevOps Consultant
 ==============================================================
 
 | Task                  | Category | Summary                                                                        |
-|:----------------------+----------+--------------------------------------------------------------------------------|
+|:--------------------- | --------- | ------- |
 | CI maintain           | Routine  | Watch failed Jenkins Jobs; Do basic trouble shooting and reproduce; escalation |
 | Operate prod env      | Routine  | Watch monitoring alerts; handle emergency; trouble shooting/escalation         |
 | AIO Chef cookbooks    | Dev      | Backbone cookbooks; all-in-one cookbooks                                       |
