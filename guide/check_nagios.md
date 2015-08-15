@@ -3,7 +3,7 @@ Check nagios
 
 ## === Nagios Link
 http://$nagios_server_ip:$nagios_server_port/nagios/
-nagiosadmin/password1234
+![](../images/nagios_gui.png)
 
 ## Check Backend command of Nagios check
 If one nagios check fails, people would like to understand what command it runs eventually.
@@ -21,4 +21,5 @@ enforce_all_nagios_check.sh "check_.*_log|check_.*_cpu|check_disk_rootfs"
 
 ## Check history of a given nagios check
 To check history of one check, here is an example:  telasticsearch mem utilization
-http://$nagios_server_ip:$nagios_server_port/nagiosgraph/cgi-bin/show.cgi?host=oscaio&service=check_elasticsearch_mem
+http://$nagios_server_ip:$nagios_server_port/nagiosgraph/cgi-bin/show.cgi?host=oscaio&service=check_disk_rootfs
+![](../images/nagios_history.png)
