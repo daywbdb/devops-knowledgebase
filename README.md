@@ -4,6 +4,7 @@ Knowledge Base for DevOps consultant: document, libraries, slides, etc.
 Link for current page: https://github.com/DennyZhang/devops-knowledgebase
 
 Characteristics Of DevOps Work:
+
 1. Different projects/products usually have many similar requirements or overlapped tasks.
 2. Most tasks are off the record and trivial in project planning, therefore hard to track effort for credit in-return
 3. If we fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
@@ -16,6 +17,7 @@ Characteristics Of DevOps Work:
 | DevOps Consultant | https://github.com/DennyZhang/devops-knowledgebase/blob/master/CustomerConsultant.md |
 
 We maintain current JIRA story, in hope of:
+
 1. Standardize routine work with minimum effort and maximum output.
 2. Separate what tasks need intensive communication/prompt response from those tasks don't need.
 3. Measure key tasks by statistics and generate visualize  report.
