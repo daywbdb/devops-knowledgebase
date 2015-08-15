@@ -12,6 +12,7 @@ Characteristics Of DevOps Work:
 | [DevOps TechStack](./TechStack) | Tech stack people should be familiar with, when doing DevOps |
 | [DevOps BusinessValue](./BusinessValue) | What business values do DevOps mean to customers |
 | [DevOps Consultant](./CustomerConsultant) | Experience for doing DevOps Consultant |
+| [DevOps Process Template](./ProcessTemplate) | Routine DevOps work provide reusable process template |
 
 We maintain current github repo, in hope of:
 
