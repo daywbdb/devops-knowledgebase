@@ -13,7 +13,7 @@ Characteristics Of DevOps Work:
 | [DevOps BusinessValue](./BussinessValue.md) | What business values do DevOps mean to customers |
 | [DevOps Consultant](./CustomerConsultant.md) | Experience for doing DevOps Consultant |
 
-We maintain current JIRA story, in hope of:
+We maintain current github repo, in hope of:
 
 1. Standardize routine work with minimum effort and maximum output.
 2. Separate what tasks need intensive communication/prompt response from those tasks don't need.
