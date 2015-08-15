@@ -3,10 +3,12 @@ Link for current page: https://bitbucket.org/oscdevops/devops_experience/src/mas
 ## DevOps TechStack
 Name a few frequently-used technologies.
 
-Layer  | Technology
-------------- | -------------
-Fundamental | Bash, chef, Jenkins
-Test facility | Docker, Kitchen, Aliyun/Digitalocean/AWS
-Monitoring | Nagios
-Verification framework | Serverspec, selenium, protractor
-Metric visualization | ELK
+| Layer  | Technology
+|:------------- | -------------
+| Fundamental | Bash, chef, Jenkins
+| Test facility | Docker, Kitchen, Aliyun/Digitalocean/AWS
+| Monitoring | Nagios
+| Verification framework | Serverspec, selenium, protractor
+| Metric visualization | ELK
+
+https://xebialabs.com/periodic-table-of-devops-tools/
