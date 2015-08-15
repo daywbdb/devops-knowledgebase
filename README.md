@@ -1,7 +1,4 @@
-# devops-knowledgebase
-Knowledge Base for DevOps consultant: document, libraries, slides, etc.
-
-Link for current page: https://github.com/DennyZhang/devops-knowledgebase
+# DevOps-knowledgebase
 
 Characteristics Of DevOps Work:
 
@@ -12,9 +9,9 @@ Characteristics Of DevOps Work:
 
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
-| [DevOps TechStack](./TechStack.md) | Tech stack |
-| DevOps BusinessValue | https://github.com/DennyZhang/devops-knowledgebase/blob/master/BussinessValue.md |
-| DevOps Consultant | https://github.com/DennyZhang/devops-knowledgebase/blob/master/CustomerConsultant.md |
+| [DevOps TechStack](./TechStack.md) | Tech stack people should be familiar with, when doing DevOps |
+| [DevOps BusinessValue](./BussinessValue.md) | What business values do DevOps mean to customers |
+| [DevOps Consultant](./CustomerConsultant.md) | Experience for doing DevOps Consultant |
 
 We maintain current JIRA story, in hope of:
 
