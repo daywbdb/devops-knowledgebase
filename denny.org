@@ -8,6 +8,16 @@
 #+ARCHIVE: %s_done::** Finished Tasks
 #+AUTHOR: dennyzhang.com (denny.zhang001@gmail.com)
 #+OPTIONS: toc:2 \n:t ^:nil creator:nil d:nil
+* What value DevOps Consultant Provides
+- Code Build
+- CI
+- Automation to Push prod env
+- Monitoring system
+- Backup
+- Autoscale
+- Auto failover
+- Trouble shooting
+
 * DevOps Library
 - Jenkins jobs: https://github.com/DennyZhang/data/tree/master/jenkins
 - nagios: https://github.com/DennyZhang/enforce_all_nagios_check
@@ -23401,15 +23411,6 @@ node.default['nodejs']['source']['url'] = \
 ** Actions
 - Or convince silverail to take 20 hours contract after 2 months
 - Get a capable US colleagues to deal the onsite requirement of silverRail, while I'm supporting from CN
-* What value DevOps Consultant Provides
-- Code Build
-- CI
-- Automation to Push prod env
-- Monitoring system
-- Backup
-- Autoscale
-- Auto failover
-- Trouble shooting
 * TODO mail: Sr. Dev Ops Engineer with lead, Infrastructure, AWS, Linux/Unix job opening - Denny           :noexport:
 [[gnus:mail.misc#0VvyPFrVYKipVl0alK5sx1qRv9Rn2RvOGlOLtH0zwMg.1433793408217.RezContact.tomcat@sjc-rezweb2][Email from Manju via Indeed (Mon, 8 Jun 2015 13:56:48 -0600 (GMT-06:00)): Sr. Dev Ops Engineer with lead]]
 #+begin_example
