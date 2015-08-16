@@ -1,6 +1,6 @@
 # DevOps-knowledgebase
 
-DevOps Role = Automation Engineers + Ops + Quality Engineers + Automation + Security/Network
+DevOps Role = Automation Engineers + Ops + Quality Engineers + Security/Network
 
 Characteristics Of DevOps Work:
 
