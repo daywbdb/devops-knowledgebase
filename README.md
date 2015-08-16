@@ -2,7 +2,7 @@
 
 Link Of Current Page: https://github.com/DennyZhang/devops-knowledgebase
 
-DevOps Role = quality engineers + automation engineers + Ops + Security
+DevOps Role = Quality Engineers + Automation Engineers + Ops + Security
 
 Characteristics Of DevOps Work:
 
