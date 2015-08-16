@@ -14,6 +14,8 @@ Characteristics Of DevOps Work:
 ![](./images/techstack.png)
 
 ![](./images/dailywork.png)
+Note: Percentage means how easy we can get the task done offline without intensive communication.
+
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
 | [DevOps Guide](./guide) | Guide links for questions frequently asked by dev team  |
