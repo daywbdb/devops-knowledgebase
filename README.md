@@ -13,6 +13,7 @@ Characteristics Of DevOps Work:
 
 ![](./images/techstack.png)
 
+![](./images/dailywork.png)
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
 | [DevOps Guide](./guide) | Guide links for questions frequently asked by dev team  |
