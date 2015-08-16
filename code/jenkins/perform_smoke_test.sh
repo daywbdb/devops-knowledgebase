@@ -4,7 +4,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-16>
-## Updated: Time-stamp: <2015-08-16 11:50:24>
+## Updated: Time-stamp: <2015-08-16 11:57:38>
 ##-------------------------------------------------------------------
 function log() {
     local msg=$*
@@ -76,6 +76,7 @@ EOF
 function test_protractor() {
     working_dir=${1?}
     protractor_conf_cfg="$working_dir/protractor_conf.js"
+    log "================ protractor $protractor_conf_cfg ============"
     protractor $protractor_conf_cfg
 }
 
