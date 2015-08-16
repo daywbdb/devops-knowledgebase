@@ -1,10 +1,12 @@
 # DevOps-knowledgebase
 
+Link Of Current Page: https://github.com/DennyZhang/devops-knowledgebase
+
 Characteristics Of DevOps Work:
 
 1. Different projects/products usually have many similar requirements or overlapped tasks.
-2. Most tasks are off the record and trivial in project planning, therefore hard to track effort for credit in-return
-3. If we fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
+2. Most tasks are off the record and trivial to plan, therefore hard to track effort for credit in-return
+3. If fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
 4. All team members may contact with DevOps, so watch out low efficiency of communication.
 
 | Name                                   | Comment                                                    |
