@@ -11,9 +11,9 @@ Characteristics Of DevOps Work:
 3. If fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
 4. All team members may contact with DevOps, so watch out low efficiency of communication.
 
-![](../images/businessvalue.png)
+![](./images/businessvalue.png)
 
-![](../images/techstack.png)
+![](./images/techstack.png)
 
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
