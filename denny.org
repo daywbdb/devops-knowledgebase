@@ -19,7 +19,6 @@
 - Trouble shooting
 
 * DevOps Library
-- Jenkins jobs: https://github.com/DennyZhang/data/tree/master/jenkins
 - nagios: https://github.com/DennyZhang/enforce_all_nagios_check
 - chef: https://supermarket.chef.io/users/dennyzhang001
 * [#A] How To Bill Customers Properly
@@ -61,7 +60,7 @@
 | metric introduction                | What does each metric mean                                           |
 |------------------------------------+----------------------------------------------------------------------|
 | handy commands                     | useful commands related to current projects                          | 
-  
+
 ** template for common pages
 
 https://totvslab.atlassian.net/wiki/display/MDMP/Tech+Ops

@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-15 10:12:07>
+## Updated: Time-stamp: <2015-08-17 00:34:27>
 ##-------------------------------------------------------------------
 ################################################################################################
 ## env variables: git_repo_url, branch_name, working_dir, test_command,
@@ -145,7 +145,7 @@ EOF
 fi
 
 if [ -n "$clean_start" ] && $clean_start; then
-    [ ! -d $code_dir ] || rm -rf $code_dir
+    [ ! -d $code_dir ] || sudo rm -rf $code_dir
 fi
 
 if [ ! -d $working_dir ]; then
