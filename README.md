@@ -2,12 +2,18 @@
 
 Link Of Current Page: https://github.com/DennyZhang/devops-knowledgebase
 
+DevOps Role = quality engineers + automation engineers + Ops + Security
+
 Characteristics Of DevOps Work:
 
 1. Different projects/products usually have many similar requirements or overlapped tasks.
 2. Most tasks are off the record and trivial to plan, therefore hard to track effort for credit in-return
 3. If fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
 4. All team members may contact with DevOps, so watch out low efficiency of communication.
+
+![](../images/businessvalue.png)
+
+![](../images/techstack.png)
 
 | Name                                   | Comment                                                    |
 |:----------------------------------------|------------------------------------------------------------|
@@ -28,17 +34,3 @@ We maintain current github repo, in hope of:
 2. Adaptive to change and comfortable to play with latest technology
 3. Strong desire to automate any routine work
 4. Trouble shooting skills
-
-DevOps Role = quality engineers + automation engineers + Ops + Security
-
-## Performance-oriented team
-1. Visualize key metrics and do a regular weekly review
-2. Wrap tasks as Jenkins jobs
-3. Track issues in ticket system and do blameless postmortems bi-weekly
-4. Work model: Tools + Projects
-5. Set up internal hack days, where cross-functional teams can get together to work on a project.
-
-## Long term goals
-1. People: Desire and ability
-2. Experience: Library and Service
-3. Product
