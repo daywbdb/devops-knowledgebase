@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-15 10:12:15>
+## Updated: Time-stamp: <2015-08-17 16:45:29>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -43,7 +43,7 @@ function git_update_code() {
     if [ ! -d $working_dir/$branch_name/$git_repo ]; then
         mkdir -p $working_dir/$branch_name
         cd $working_dir/$branch_name
-        git clone --depth 1 $git_repo_url --branch $branch_name --single-branchu
+        git clone --depth 1 $git_repo_url --branch $branch_name --single-branch
     else
         cd $working_dir/$branch_name/$git_repo
         git config remote.origin.url $git_repo_url
