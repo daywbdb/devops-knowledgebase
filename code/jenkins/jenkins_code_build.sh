@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-15 10:10:41>
+## Updated: Time-stamp: <2015-08-17 10:15:01>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -20,7 +20,7 @@
 ##      files_to_copy: gateway/war/build/libs/gateway-war-1.0-SNAPSHOT.war oauth2/rest-service/build/libs/oauth2-rest-1.0-SNAPSHOT.war
 ##      env_parameters:
 ##           export clean_start=true
-##           export force_build=true
+##           export force_build=false
 ##           export skip_copy=false
 ##      build_command: make
 ################################################################################################
