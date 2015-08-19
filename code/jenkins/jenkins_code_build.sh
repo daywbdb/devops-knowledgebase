@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-17 10:15:01>
+## Updated: Time-stamp: <2015-08-19 14:54:45>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -180,14 +180,21 @@ log "================= Build Environment ================="
 env
 log "\n\n\n"
 
-log "================= Build Code ================="
-log "================= cd $code_dir ================="
+log "================= Build code: cd $code_dir ================="
 /usr/sbin/locale-gen --lang en_US.UTF-8
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 log "$build_command"
 eval $build_command
+
+log "================= Confirm files are generated ================="
+for f in ${files_to_copy[*]};do
+    if [ ! -f $f ]; then
+        log "Error: $f is not created"
+        exit 1
+    fi
+done
 
 if [ -n "$files_to_copy" ] && ! $skip_copy; then
     log "================= Generate Packages ================="
