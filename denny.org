@@ -27410,3 +27410,42 @@ Finished: FAILURE
 [8/14/15, 9:26:15 PM] jacobzeng-曾瑞林ruilin: 我刚提交了删除，稍等
 #+END_EXAMPLE
 
+* TODO Deal with customers who need detail update everyday
+#+BEGIN_EXAMPLE
+[8/18/15, 9:15:07 PM] kungchaowang: let me add the format, and please add details to them
+[8/18/15, 9:18:25 PM] kungchaowang: please see ticket MDM-328 and MDM-624 to fill up the status for each task in the table.
+[8/18/15, 9:23:04 PM] kungchaowang: please don’t use comments, please add sub-tasks to ticket like MDM-624, and give every subtask points and also days of work. so we can keep better tracking of the things got done
+[8/18/15, 9:26:43 PM] denny: ok
+[8/18/15, 9:30:22 PM] kungchaowang: Denny, we will need you to give us update more frequent. So, it will be, send to totvslabs emails to give everyone in office your update every monday/wed/friday. Detail describe what you do and what you have completed.
+[8/18/15, 9:31:11 PM] kungchaowang: meanwhile, I will have to start code review on your works after I come back from vacation, which is Aug 31 and on.
+[8/18/15, 9:32:12 PM] kungchaowang: so I will start to pick up my chef and docker skills, so I can better understand what you do.
+[8/18/15, 9:32:55 PM] kungchaowang: that’s for now, ping me when you have questions for me.
+[8/18/15, 11:00:00 PM] denny: ok
+[8/18/15, 11:01:03 PM] kungchaowang: thank you, let’s do that and see if we can make people more visualize your work
+[8/18/15, 11:01:23 PM] denny: yes, let’s try this approach.
+#+END_EXAMPLE
+
+* TODO devops consultant: Pepole demand request
+#+BEGIN_EXAMPLE
+[8/18/15, 10:34:24 PM] Robson Thanael Poffo: Another question, about the VM... Is possible for me see the Fluig Data log in sandbox?
+[8/18/15, 10:53:40 PM] denny: Hi Robson
+
+Thanks for bringing this to table.
+
+Technically speaking, we definitely can, like allow people to ssh or export log by web ui.
+
+We will have concern, if we have people more access, will it damage the code security.
+
+To support this, we need a solution which people will agree.
+
+So could you send me an email and cc Kung, so that I can start this discussion
+[8/18/15, 11:56:26 PM] Robson Thanael Poffo: Ok..
+[8/18/15, 11:56:33 PM] Robson Thanael Poffo: I am going to send the email to you
+[8/18/15, 11:56:38 PM] denny: thanks
+[8/18/15, 11:56:54 PM] Robson Thanael Poffo: I agree that is not good for us enable ssh (security code)
+[8/18/15, 11:57:10 PM] Robson Thanael Poffo: I liked your suggestion about allow web access to the log
+[8/18/15, 11:57:18 PM] Robson Thanael Poffo: thanks
+[8/18/15, 11:58:49 PM] denny: Yes, let’s start the topic in email, so that I can propose solution on this..
+
+It’s not a very small fix. So I need to convince Kung/Vicente first, only after then I can put effort on that.
+#+END_EXAMPLE
