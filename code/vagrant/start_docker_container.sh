@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-05-28>
-## Updated: Time-stamp: <2015-08-04 10:03:11>
+## Updated: Time-stamp: <2015-08-21 08:44:38>
 ##-------------------------------------------------------------------
 image_name=${1?"docker image name"}
 image_repo_name=${image_name%:*}
@@ -129,7 +129,7 @@ mkdir -p /root/docker/
 
 log "Install autostart script for /etc/init.d/docker_sandbox"
 curl -o /etc/init.d/docker_sandbox \
-     https://raw.githubusercontent.com/DennyZhang/data/master/vagrant/docker_sandbox.sh
+     https://raw.githubusercontent.com/DennyZhang/devops-knowledgebase/master/code/vagrant/docker_sandbox.sh
 chmod 755 /etc/init.d/docker_sandbox
 config_auto_start "docker_sandbox"
 
