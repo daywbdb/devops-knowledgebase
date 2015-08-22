@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-14 16:56:17>
+## Updated: Time-stamp: <2015-08-22 22:53:56>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -99,6 +99,7 @@ start_instance_command="ssh -i $ssh_key_file -o StrictHostKeyChecking=no root@$s
 if [ -n "$start_command" ]; then
     log $start_instance_command
     eval $start_instance_command
+    sleep 5
 fi
 
 if $kill_running_chef_update; then
