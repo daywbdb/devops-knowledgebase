@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-05-28>
-## Updated: Time-stamp: <2015-08-14 13:43:56>
+## Updated: Time-stamp: <2015-08-22 08:03:17>
 ##-------------------------------------------------------------------
 image_name=${1?"docker image name"}
 use_private_hub=${2:-"no"}
@@ -250,7 +250,7 @@ fi
 
 if [ $container_status = "none" ]; then
     docker run -d -t --privileged -v /root/docker/:/var/lib/jenkins/code/ \
-            -h $hostname --name $container_name -p 5022:22 -p 28000:28000 \
+            -h $hostname --name $container_name -p 4022:22 -p 28000:28000 \
             -p 28080:28080 -p 3128:3128 \
            $image_name /usr/sbin/sshd -D
 elif [ $container_status = "dead" ]; then

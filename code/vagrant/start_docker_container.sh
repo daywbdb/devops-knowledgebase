@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-05-28>
-## Updated: Time-stamp: <2015-08-21 08:44:38>
+## Updated: Time-stamp: <2015-08-22 08:03:22>
 ##-------------------------------------------------------------------
 image_name=${1?"docker image name"}
 image_repo_name=${image_name%:*}
@@ -150,7 +150,7 @@ fi
 
 if [ $container_status = "none" ]; then
     docker run -d -t --privileged -v /root/docker/:/var/lib/jenkins/code/ \
-           --name $container_name -p 5022:22 -p 28000:28000 -p 28080:28080 -p 3128:3128 \
+           --name $container_name -p 4022:22 -p 28000:28000 -p 28080:28080 -p 3128:3128 \
            $image_name /usr/sbin/sshd -D
 elif [ $container_status = "dead" ]; then
     docker start $container_name
