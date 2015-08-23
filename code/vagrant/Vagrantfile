@@ -11,7 +11,7 @@ FOLDER_SHARE="local_code_share"
 Vagrant.configure(2) do |config|
   config.vm.box = "ubuntu/trusty64" # The OS is Ubuntu 14.04 64 bits
   # config.vm.box = "chef/centos-6.5" # CentOS
-  config.vm.hostname = "docker.test.com"
+  config.vm.hostname = "ngiam.authright.com"
   config.vm.provider "virtualbox" do |vb|
     vb.name = "iam-vagrant-test"
     vb.customize ["modifyvm", :id, "--memory", VM_MEMORY_MB, "--cpus", VM_CPU_CORES]
