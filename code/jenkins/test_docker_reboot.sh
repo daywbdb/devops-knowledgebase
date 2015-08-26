@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-08 16:07:03>
+## Updated: Time-stamp: <2015-08-26 08:29:08>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -42,6 +42,7 @@ trap shell_exit SIGHUP SIGINT SIGTERM 0
 ########################################################################
 log "$start_instance_command"
 $start_instance_command
+sleep 5
 
 log "$check_instance_command"
 $check_instance_command
