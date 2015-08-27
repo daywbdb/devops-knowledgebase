@@ -2,7 +2,7 @@ https://xebialabs.com/periodic-table-of-devops-tools/
 
 DevOps need to know deeply about: Jenkins, Chef and bash
 
-https://github.com/DennyZhang/devops-knowledgebase/blob/master/TechStack/TechStack.mm
+https://github.com/DennyZhang/devops-knowledgebase/blob/master/freemind/TechStack.mm
 ![](../images/techstack.png)
 
 ## Performance-oriented team
