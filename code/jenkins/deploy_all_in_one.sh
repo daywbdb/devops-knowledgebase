@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-22 22:53:56>
+## Updated: Time-stamp: <2015-08-27 12:46:35>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -66,8 +66,6 @@ function shell_exit() {
 trap shell_exit SIGHUP SIGINT SIGTERM 0
 
 ########################################################################
-log "env variables. kill_running_chef_update: $kill_running_chef_update, stop_container: $stop_container"
-
 echo "Deploy to ${ssh_server_ip}:${ssh_port}"
 env_dir="/tmp/env/"
 env_file="$env_dir/$$"
@@ -80,6 +78,8 @@ $env_parameters
 EOF
     . $env_file
 fi
+
+log "env variables. kill_running_chef_update: $kill_running_chef_update, stop_container: $stop_container"
 
 working_dir="/root/"
 ssh_key_file="/var/lib/jenkins/.ssh/id_rsa"
