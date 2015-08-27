@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-05-28>
-## Updated: Time-stamp: <2015-08-22 08:03:22>
+## Updated: Time-stamp: <2015-08-27 15:20:50>
 ##-------------------------------------------------------------------
 image_name=${1?"docker image name"}
 image_repo_name=${image_name%:*}
@@ -149,7 +149,7 @@ if [ $container_status = "running" ] && [ "$image_has_new_version" = "yes" ]; th
 fi
 
 if [ $container_status = "none" ]; then
-    docker run -d -t --privileged -v /root/docker/:/var/lib/jenkins/code/ \
+    docker run -d -t -h jenkins --privileged -v /root/docker/:/var/lib/jenkins/code/ \
            --name $container_name -p 4022:22 -p 28000:28000 -p 28080:28080 -p 3128:3128 \
            $image_name /usr/sbin/sshd -D
 elif [ $container_status = "dead" ]; then
@@ -168,7 +168,7 @@ fi
 
 if [ $container_status = "none" ]; then
     # TODO:
-    docker run -d -t --privileged --name $container_name \
+    docker run -d -t --privileged -h aio --name $container_name \
            -p 10000-10050:10000-10050 -p 80:80 -p 443:443 \
            -p 6022:22 -p 1389:1389 $image_name /usr/sbin/sshd -D
 elif [ $container_status = "dead" ]; then

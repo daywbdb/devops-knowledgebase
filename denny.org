@@ -21318,6 +21318,7 @@ BTW, I already know enough for how to use it.
 * TODO [#A] How to minimize the need of restart the whole service stack, if issues(especially network issues) happens
 * TODO DevOps Role model and company
 http://www.stratalux.com
+http://www.5ops.com
 * TODO [#B] How to test whether the entire world can't access the system or just someone?
 https://blog.serverdensity.com/do-you-trust-your-critical-infrastructure/
 * TODO [Jay] How to avoid pepole from old consulting projects keep ping me in Skype
