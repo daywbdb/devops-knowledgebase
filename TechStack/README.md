@@ -18,11 +18,16 @@ https://github.com/DennyZhang/devops-knowledgebase/blob/master/freemind/TechStac
 3. Product
 
 ## Chef learning links
-
+```
 https://www.chef.io/blog/2015/04/21/overview-of-test-driven-infrastructure-with-chef/
-
 Overview of Test Driven Infrastructure with Chef
 
-http://www.5ops.com/how-we-write-chef-cookbooks/
+http://learn.chef.io/skills/fundamentals-series-week-1/
+Chef fundamentals
 
+http://www.5ops.com/how-we-write-chef-cookbooks/
 Deserve reading: covers all the major parts of chef cookbook development.
+
+http://learn.chef.io/skills/
+Building DevOps skills
+```
