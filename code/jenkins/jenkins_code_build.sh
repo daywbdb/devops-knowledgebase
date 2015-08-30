@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-19 14:54:45>
+## Updated: Time-stamp: <2015-08-30 20:00:42>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -67,7 +67,7 @@ function generate_version() {
     local branch_name=${2?}
     local revision_sha=${3?}
 
-    local my_ip=$(wget -qO- http://ipecho.net/plain)
+    local my_ip=$(/sbin/ifconfig eth0 | grep 'inet addr:' | cut -d: -f2 | awk '{ print $1}')
     log "Build From $branch_name branch of $git_repo repo."
     log "Revision: $revision_sha"
     log "Build Time: `date +'%Y-%m-%d %H:%M:%S'`"
