@@ -4,7 +4,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-16>
-## Updated: Time-stamp: <2015-08-16 11:57:38>
+## Updated: Time-stamp: <2015-08-31 04:12:09>
 ##-------------------------------------------------------------------
 function log() {
     local msg=$*
@@ -77,6 +77,8 @@ function test_protractor() {
     working_dir=${1?}
     protractor_conf_cfg="$working_dir/protractor_conf.js"
     log "================ protractor $protractor_conf_cfg ============"
+    export LANG="en_US.UTF-8"
+    export LC_ALL="en_US.UTF-8"
     protractor $protractor_conf_cfg
 }
 
