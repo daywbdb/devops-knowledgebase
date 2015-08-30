@@ -27450,3 +27450,213 @@ So could you send me an email and cc Kung, so that I can start this discussion
 
 It’s not a very small fix. So I need to convince Kung/Vicente first, only after then I can put effort on that.
 #+END_EXAMPLE
+* web page: Monitoring Linux Remote Hosts with nagios NRPE...          
+http://blog.roozbehk.com/post/25059446631/nrpe-monitoring-linux-remote-hosts-nagios
+** webcontent                     :noexport:
+#+begin_example
+Location: http://blog.roozbehk.com/post/25059446631/nrpe-monitoring-linux-remote-hosts-nagios                                 
+Roozbeh Kavian
+
+Roozbehk.com Logo Life Runs on Code
+
+  * Home
+  * Blog
+  * Snippets
+  * Archive
+  * Contact
+  * Subscribe via RSS
+
+Monitoring Linux Remote Hosts with nagios NRPE daemon
+
+---------------------------------------------------------------------------------------------------
+
+This guide will walk through the steps to properly configure your NRPE daemon. we will show how to
+install NRPE in Red Hat Enterprise Linux / Cent OS to monitor server health. This has been test in
+Red Hat Enterprise Linux 4 and 5.
+
+1 - Summary
+
+NRPE (Nagios Remote Plugin Executor) plugin allows you to monitor any number of remote network
+devices and services using Nagios. Installing and Configuring a Nagios Server is not part of this
+HowTo. You will need a nagios machine already in place on your internal network to monitor the host
+we install the nrpe daemon on.
+
+2 - installation nrpe, nagios-plugins-all
+
+you will need to have yum EPEL repository enabled for your Redhat/CentsOs machine. Check out this
+guide: Enable EPEL Repository
+
+sudo yum install nrpe
+sudo yum install nagios-plugins-all
+
+3 - edit nrpe.cfg to allow your nagios server
+
+Edit nrpe configuration file:
+
+vim /etc/nagios/nrpe.cfg
+
+find line allowed_hosts . it is a comma separated list. add your nagios server ip to the list
+
+allowed_hosts=127.0.0.1,192.168.1.100
+
+4 - IPTables
+
+nrpe daemon binds to port 5666. edit your iptables filter to accept connection from your nagios
+server
+
+-A RH-Firewall-1-INPUT -s 192.168.1.100 -p tcp --dport 5666 -j ACCEPT
+
+5 - Hosts.allow
+
+Now, open the /etc/hosts.allow file and add an entry for the IP address of your remote monitoring
+server.
+
+nrpe: 192.168.1.100   nagios.example.edu
+
+6 - Start nrpe service
+
+Start nrpe service 
+
+sudo /sbin/service nrpe start
+
+7 - Test Connection 
+
+test the connection from your nagios box and see if you can connect to nrpe daemon
+
+telnet 192.168.1.100 5666
+
+If the connection immediately closes you’ve got a problem and something isn’t right. If the socket
+opens and you are met with the following:
+
+Escape character is '^]'.
+
+Then y ou’re ready to move on. If you’ve got problems at this point, go back through each of the
+steps above and check for any errors in configuration.
+
+9 - Start nrpe service on system start up
+
+Enable the nrpe service so that it will start when the system starts up.
+
+sudo /sbin/chkconfig nrpe on 
+sudo /sbin/chkconfig --list nrpe 
+nrpe 0:off 1:off 2:on 3:on 4:on 5:on 6:off
+
+8 - Define Command Definition for check_nrpe
+
+now that the nrpe service is installed and running, lets make sure there is command definition for
+check_nrpe if there is no command please add the below code. open your checkcommands.cfgfile.These
+are specified in the $NAGIOSHOME/etc/checkcommands.cfg file. Where there are parameters available
+for a command, these can be passed through from services.cfg. my checkcommands.cfg is located in /
+usr/local/nagios/etc/objects/checkcommands.cfg
+
+When monitoring remote services, we first issue a check_nrpe command followed by a ! and the
+command on the remote machine to run. This means that we are going to need an instance of
+check_nrpe on our Nagios Server. check_nrpe should be under /usr/local/nagios/libexec if you can’t
+find it. you will need to compile or install it for your nagios
+
+define command{
+        command_name check_nrpe
+        command_line $USER10$/check_nrpe -H $HOSTADDRESS$ -t 30 -c $ARG1$
+}
+
+8 - Add New Host & Service
+
+We are now ready to add our new host to our primary Nagios installation. This is very straight
+forward and should only take a moment.
+
+Back on the primary Nagios installation server we need to edit our hosts.cfg configuration file.
+The file is located in /usr/local/nagios/etc/hosts.cfg. This may change depending on your
+installation and organization of configuration files. Read the first part of this whitepaper for
+organization advise.
+
+In the hosts.cfg file, add your new host object:
+
+define host{
+        use generic-host
+        #Hostname of remote system
+        host_name host.domain.com
+        # A friendly name for this server
+        alias Friendly  name 
+        # Remote host IP address
+        address 127.0.0.1
+        check_command check-host-alive
+        max_check_attempts 10
+        notification_interval 30
+        notification_period 24x7
+        notification_options d,r
+        # Your defined contact group name
+        contact_groups admins
+}
+
+At this time our hosts.cfg file contains two hosts objects, the localhost which is running the
+Nagios application and our remote host which we will be monitoring.
+
+We now want to add the service objects to our services.cfg file located in the same directory. Add
+the following single service to your services.cfg file:
+
+define service{
+        use generic-service
+        # Hostname of remote system
+        host_name host.domain.com
+        service_description Primary Disk Usage
+        is_volatile 0
+        check_period 24x7
+        max_check_attempts 3
+        normal_check_interval 5
+        retry_check_interval 1
+        # Change to your contact group
+        contact_groups admins
+        notification_options w,u,c,r
+        notification_interval 10
+        notification_period 24x7
+        check_command check_nrpe!check_disk1
+}
+
+9 - reload nagios configuration
+
+ /etc/init.d/nagios reload 
+
+once nagios is reloaded without errors check nagios web for the added check and make sure it is
+recieving information from nrpe service on the host.
+
+---------------------------------------------------------------------------------------------------
+
+Wednesday, June 13th, 2012
+
+View the discussion thread
+[                    ]  Search 
+Blog (*) Snippets ( )
+
+Roozbeh Kavian
+
+[roozbeh_ka]
+
+  * Linkedin
+  * Github
+
+Published
+
+Wednesday, June 13th, 2012
+
+Tags
+
+  * HowTo
+  * NRPE
+  * nagios
+  * Monitoring
+  * redhat
+
+Recent Posts [rss_feed]
+
+Recent Snippets [rss_feed]
+
+Archive
+Mobile
+
+Recent Tweets
+
+Tag Cloud
+
+[impixu][impixu]
+
+#+end_example

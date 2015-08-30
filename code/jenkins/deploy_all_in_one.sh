@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-27 12:46:35>
+## Updated: Time-stamp: <2015-08-31 03:44:49>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -72,7 +72,8 @@ env_file="$env_dir/$$"
 
 if [ -n "$env_parameters" ]; then
     mkdir -p $env_dir
-    log "env file: $env_file. Set env parameters: $env_parameters"
+    log "env file: $env_file. Set env parameters:"
+    log "$env_parameters"
     cat > $env_file <<EOF
 $env_parameters
 EOF

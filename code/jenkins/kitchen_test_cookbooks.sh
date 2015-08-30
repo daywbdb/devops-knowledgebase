@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-17 00:34:27>
+## Updated: Time-stamp: <2015-08-31 03:45:00>
 ##-------------------------------------------------------------------
 ################################################################################################
 ## env variables: git_repo_url, branch_name, working_dir, test_command,
@@ -137,7 +137,8 @@ code_dir=$working_dir/$branch_name/$github_repo
 
 if [ -n "$env_parameters" ]; then
     mkdir -p $env_dir
-    log "env file: $env_file. Set env parameters: $env_parameters"
+    log "env file: $env_file. Set env parameters:"
+    log "$env_parameters"
     cat > $env_file <<EOF
 $env_parameters
 EOF
