@@ -4,7 +4,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-16>
-## Updated: Time-stamp: <2015-08-31 04:48:22>
+## Updated: Time-stamp: <2015-08-31 05:05:15>
 ##-------------------------------------------------------------------
 function log() {
     local msg=$*
@@ -70,7 +70,8 @@ EOF
 describe('Authright GUI verification', function() {
 url = "http://" + browser.params.login.server_ip
 
-$test_case
+$gui_test_case
+
 });
 EOF
 }
