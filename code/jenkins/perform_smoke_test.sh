@@ -4,7 +4,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-16>
-## Updated: Time-stamp: <2015-08-31 04:12:09>
+## Updated: Time-stamp: <2015-08-31 04:48:22>
 ##-------------------------------------------------------------------
 function log() {
     local msg=$*
@@ -68,6 +68,8 @@ EOF
     log "configure $protractor_testcase"
     cat > $protractor_testcase <<EOF
 describe('Authright GUI verification', function() {
+url = "http://" + browser.params.login.server_ip
+
 $test_case
 });
 EOF
