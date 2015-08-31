@@ -27660,3 +27660,11 @@ Tag Cloud
 [impixu][impixu]
 
 #+end_example
+* TODO devops principle: One of the challenges to writing a fast and reliable end-to-end test for such a system is avoiding network access.
+http://googletesting.blogspot.sg/2012/10/hermetic-servers.html
+
+One of the challenges to writing a fast and reliable end-to-end test
+for such a system is avoiding network access. Tests involving network
+access are slower than their counterparts that only access local
+resources, and accessing external servers might lead to flakiness due
+to lack of determinism or unavailability of the external servers.

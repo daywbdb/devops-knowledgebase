@@ -11,7 +11,9 @@
 <node CREATED="1439723107290" ID="ID_1031585344" MODIFIED="1439734401440" TEXT="Automate backup/recovery and keep testing it"/>
 </node>
 <node CREATED="1439734746697" ID="ID_1559787310" MODIFIED="1439734768661" POSITION="right" TEXT="Improve dev team productivity">
-<node CREATED="1439734256613" ID="ID_1958297259" MODIFIED="1439734782895" TEXT="Enable local test by local sandbox solution"/>
+<node CREATED="1439734256613" FOLDED="true" ID="ID_1958297259" MODIFIED="1441010116998" TEXT="Enable local test by local sandbox solution">
+<node CREATED="1441010106328" ID="ID_316687580" MODIFIED="1441010112520" TEXT="minimum internet access"/>
+</node>
 <node CREATED="1439734788332" ID="ID_656860057" MODIFIED="1439734810501" TEXT="Tuning the time-wasting actions"/>
 </node>
 <node CREATED="1439723137301" ID="ID_1778858711" MODIFIED="1439734828410" POSITION="right" TEXT="Clustering and HA">

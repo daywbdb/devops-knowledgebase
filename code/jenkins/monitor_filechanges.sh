@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-31 03:44:59>
+## Updated: Time-stamp: <2015-08-31 17:01:55>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -80,7 +80,7 @@ function detect_changed_file() {
     local files_to_monitor=${4?}
     local file_list=$(git_changed_filelist $src_dir $old_sha $new_sha)
 
-    echo -ne "\n\n==========""git diff --name-only $old_sha $new_sha\n"
+    echo -ne "\n\n==========""git diff --name-only ${old_sha}..${new_sha}\n"
     echo $file_list
     for file in ${file_list[*]}; do
       if echo -ne "$files_to_monitor" | grep $file 1>/dev/null 2>1; then
