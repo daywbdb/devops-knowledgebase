@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-09-01 13:01:47>
+## Updated: Time-stamp: <2015-09-01 13:32:42>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -53,7 +53,7 @@ function git_update_code() {
     cd $working_dir/$branch_name/$git_repo
     git checkout $branch_name
     git reset --hard
-    git pull
+    git pull origin $branch_name
 }
 
 function current_git_sha() {

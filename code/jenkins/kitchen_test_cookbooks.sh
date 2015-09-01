@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-09-01 13:01:29>
+## Updated: Time-stamp: <2015-09-01 13:33:16>
 ##-------------------------------------------------------------------
 ################################################################################################
 ## env variables: git_repo_url, branch_name, working_dir, test_command,
@@ -51,7 +51,7 @@ function git_update_code() {
     cd $working_dir/$branch_name/$git_repo
     git checkout $branch_name
     git reset --hard
-    git pull
+    git pull origin $branch_name
 }
 
 function get_cookbooks() {
@@ -132,10 +132,10 @@ function shell_exit() {
     exit $errcode
 }
 ########################################################################
-github_repo=$(echo ${git_repo_url%.git} | awk -F '/' '{print $2}')
+git_repo=$(echo ${git_repo_url%.git} | awk -F '/' '{print $2}')
 env_dir="/tmp/env/"
 env_file="$env_dir/$$"
-code_dir=$working_dir/$branch_name/$github_repo
+code_dir=$working_dir/$branch_name/$git_repo
 
 if [ -n "$env_parameters" ]; then
     mkdir -p $env_dir
@@ -156,7 +156,7 @@ if [ ! -d $working_dir ]; then
     chown -R jenkins:jenkins "$working_dir"
 fi
 
-git_update_code $github_repo $branch_name $working_dir $git_repo_url
+git_update_code $git_repo $branch_name $working_dir $git_repo_url
 cd $working_dir/$branch_name/$git_repo
 git pull origin $branch_name
 
