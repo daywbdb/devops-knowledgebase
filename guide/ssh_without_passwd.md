@@ -1,6 +1,6 @@
 ssh without password
 ====================
-1. When ssh to server, username/password is insecure. Brute login
+1. When ssh to server, username/password is insecure. env would be vulnerable to brute force login.
 2. If members leaving the team, we will have to reset OS password.
 
 This is quite painful.
