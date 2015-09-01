@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-08-31 17:01:55>
+## Updated: Time-stamp: <2015-09-01 13:01:47>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -37,6 +37,7 @@ function git_update_code() {
     local branch_name=${2?}
     local working_dir=${3?}
     local git_repo_url=${4?}
+    local git_pull_outside=${5:-"no"}
 
     echo "Git update code for '$git_repo_url' to $working_dir, branch_name: $branch_name"
     # checkout code, if absent
@@ -151,6 +152,8 @@ fi
 
 # Update code
 git_update_code $git_repo $branch_name $working_dir $git_repo_url
+cd $working_dir/$branch_name/$git_repo
+git pull origin $branch_name
 
 changed_file_list=""
 cd $code_dir

@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-31 03:45:00>
+## Updated: Time-stamp: <2015-09-01 13:01:29>
 ##-------------------------------------------------------------------
 ################################################################################################
 ## env variables: git_repo_url, branch_name, working_dir, test_command,
@@ -35,6 +35,8 @@ function git_update_code() {
     local branch_name=${2?}
     local working_dir=${3?}
     local git_repo_url=${4?}
+    local git_pull_outside=${5:-"no"}
+
     echo "Git update code for '$git_repo_url' to $working_dir, branch_name: $branch_name"
     # checkout code, if absent
     if [ ! -d $working_dir/$branch_name/$git_repo ]; then
@@ -155,6 +157,8 @@ if [ ! -d $working_dir ]; then
 fi
 
 git_update_code $github_repo $branch_name $working_dir $git_repo_url
+cd $working_dir/$branch_name/$git_repo
+git pull origin $branch_name
 
 cookbook_dir="$code_dir/cookbooks"
 cd $cookbook_dir
