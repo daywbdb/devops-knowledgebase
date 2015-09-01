@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-08-31 03:44:54>
+## Updated: Time-stamp: <2015-09-01 09:19:35>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -44,6 +44,7 @@ function git_update_code() {
     local git_repo_url=${2?}
     local branch_name=${3?}
     local working_dir=${4?}
+    local git_pull_outside=${5:-"no"}
 
     log "Git update code for '$git_repo_url' to $working_dir, branch_name: $branch_name"
     # checkout code, if absent
@@ -59,7 +60,9 @@ function git_update_code() {
     cd $working_dir/$branch_name/$git_repo
     #git reset --hard
     git checkout $branch_name
-    git pull
+    if [ $git_pull_outside = "no" ]; then
+        git pull
+    fi
 }
 
 function generate_version() {
@@ -158,7 +161,9 @@ else
 fi
 
 # Update code
-git_update_code $git_repo $git_repo_url $branch_name $working_dir
+git_update_code $git_repo $git_repo_url $branch_name $working_dir "yes"
+
+git pull
 
 new_sha=$(current_git_sha $code_dir)
 log "old_sha: $old_sha, new_sha: $new_sha"
