@@ -1,6 +1,10 @@
 # DevOps-knowledgebase
 
+What's DevOps domain: Build and Deploy? Anything exclude feature prorgramming?
+
 DevOps Role = Automation Engineers + Ops + Quality Engineers + Security/Network
+
+Business Values to DevOps: offline (faster, cheaper, less bug) + online (always up)
 
 Characteristics Of DevOps Work:
 
@@ -8,10 +12,6 @@ Characteristics Of DevOps Work:
 2. Most tasks are off the record and trivial to plan, therefore hard to track effort for credit in-return
 3. If fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
 4. All team members may contact with DevOps, so watch out low efficiency of communication.
-
-What's DevOps domain: Build and Deploy? Anything exclude feature prorgramming?
-
-Business Values to DevOps: offline (faster, cheaper, less bug) + online (always up)
 
 ![](./images/businessvalue.png)
 
