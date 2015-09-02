@@ -11,6 +11,10 @@ Characteristics Of DevOps Work:
 
 ![](./images/businessvalue.png)
 
+![](./images/DevOpsPrinciples.png)
+
+![](./images/DevOpsConsultant.png)
+
 ![](./images/techstack.png)
 
 ![](./images/dailywork.png)
