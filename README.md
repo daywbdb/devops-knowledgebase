@@ -9,6 +9,10 @@ Characteristics Of DevOps Work:
 3. If fail to foresee potential risks of critical envs, DevOps life can easily be frustrating and fruitless.
 4. All team members may contact with DevOps, so watch out low efficiency of communication.
 
+What's DevOps domain: Build and Deploy? Anything exclude feature prorgramming?
+
+Business Values to DevOps: offline (faster, cheaper, less bug) + online (always up)
+
 ![](./images/businessvalue.png)
 
 ![](./images/DevOpsPrinciples.png)
