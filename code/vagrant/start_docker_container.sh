@@ -5,9 +5,9 @@
 ## Description :
 ## --
 ## Created : <2015-05-28>
-## Updated: Time-stamp: <2015-08-27 15:22:09>
+## Updated: Time-stamp: <2015-09-04 15:41:45>
 ##-------------------------------------------------------------------
-image_name=${1?"docker image name"}
+image_name=${1:-"denny/osc:latest"}
 image_repo_name=${image_name%:*}
 
 function log() {
