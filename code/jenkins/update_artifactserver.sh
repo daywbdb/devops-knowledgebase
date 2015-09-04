@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-08-05>
-## Updated: Time-stamp: <2015-09-04 13:45:55>
+## Updated: Time-stamp: <2015-09-04 13:58:19>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -15,9 +15,10 @@
 ##       ssh_server_ip: 123.57.240.189
 ##       env_parameters:
 ##             export ssh_port=22
-##             export ssh_key_file="/var/lib/jenkins/.ssh/id_rsa"
+##             export ssh_key_file=/var/lib/jenkins/.ssh/id_rsa
 ##             export src_dir=/var/www/repo/dev
 ##             export dst_dir=/var/www/repo/dev
+##             export tmp_dir=/tmp/artifact
 ################################################################################################
 function log() {
     local msg=$*
@@ -42,7 +43,9 @@ fi
 log "env variables. kill_running_chef_update: $kill_running_chef_update, stop_container: $stop_container"
 
 # ssh_server_ip
-tmp_dir="/root/artifact/"
+if [ -z "$tmp_dir" ]; then
+    tmp_dir="/root/artifact/"
+fi
 
 if [ -z "$src_dir" ]; then
     src_dir="/var/www/repo/dev"
@@ -68,5 +71,4 @@ scp -i $ssh_key_file -P $ssh_port -o StrictHostKeyChecking=no -r $src_dir/* root
 log "make symbol link"
 ssh -i $ssh_key_file -p $ssh_port -o StrictHostKeyChecking=no root@$ssh_server_ip rm -rf $dst_dir
 ssh -i $ssh_key_file -p $ssh_port -o StrictHostKeyChecking=no root@$ssh_server_ip ln -s $tmp_dir $dst_dir
-
 ## File : update_artifactserver.sh ends
