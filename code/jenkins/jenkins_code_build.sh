@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-09-03 01:01:03>
+## Updated: Time-stamp: <2015-09-05 09:15:17>
 ##-------------------------------------------------------------------
 
 ################################################################################################
@@ -62,7 +62,7 @@ function git_update_code() {
     git checkout $branch_name
     if [ $git_pull_outside = "no" ]; then
         # add retry for network turbulence
-        git pull origin $branch_name || git pull origin $branch_name
+        git pull origin $branch_name || (sleep 2 && git pull origin $branch_name)
     fi
 }
 
@@ -165,7 +165,7 @@ fi
 git_update_code $git_repo $git_repo_url $branch_name $working_dir "yes"
 cd $working_dir/$branch_name/$git_repo
 # add retry for network turbulence
-git pull origin $branch_name || git pull origin $branch_name
+git pull origin $branch_name || (sleep 2 && git pull origin $branch_name)
 
 new_sha=$(current_git_sha $code_dir)
 log "old_sha: $old_sha, new_sha: $new_sha"

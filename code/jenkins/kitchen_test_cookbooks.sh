@@ -5,7 +5,7 @@
 ## Description :
 ## --
 ## Created : <2015-07-03>
-## Updated: Time-stamp: <2015-09-03 01:01:12>
+## Updated: Time-stamp: <2015-09-05 09:15:42>
 ##-------------------------------------------------------------------
 ################################################################################################
 ## env variables: git_repo_url, branch_name, working_dir, test_command,
@@ -52,7 +52,7 @@ function git_update_code() {
     git checkout $branch_name
     git reset --hard
     # add retry for network turbulence
-    git pull origin $branch_name || git pull origin $branch_name
+    git pull origin $branch_name || (sleep 2 && git pull origin $branch_name)
 }
 
 function get_cookbooks() {
@@ -160,7 +160,7 @@ fi
 git_update_code $git_repo $branch_name $working_dir $git_repo_url
 cd $working_dir/$branch_name/$git_repo
 # add retry for network turbulence
-git pull origin $branch_name || git pull origin $branch_name
+git pull origin $branch_name || (sleep 2 && git pull origin $branch_name)
 
 cookbook_dir="$code_dir/cookbooks"
 cd $cookbook_dir
