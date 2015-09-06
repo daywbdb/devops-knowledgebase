@@ -27668,3 +27668,20 @@ for such a system is avoiding network access. Tests involving network
 access are slower than their counterparts that only access local
 resources, and accessing external servers might lead to flakiness due
 to lack of determinism or unavailability of the external servers.
+* #  --8<-------------------------- separator ------------------------>8--
+* CANCELED osc: 国内git clone代码慢的问题
+  CLOSED: [2015-09-05 Sat 10:52]
+#+BEGIN_EXAMPLE
+[7/20/15, 1:31:22 PM] denny: 国内checkout/pull代码是十分慢。
+
+这个问题，我在成都同事中，时有听闻。
+
+想了一个方案，大家看看，有没有改进意见。
+[7/20/15, 1:33:31 PM] Brandon  Chen: 😀
+[7/20/15, 1:34:12 PM] denny: 1. 在阿里云的VM里装一个git, Jenkins
+2. 提供公网可以访问的jenkins job. 通过这个job, 大家可以提供repo的url, 用户名，密码， branch name
+3. 这个job会把代码git clone或git pull下到本地
+4. 本地的目录，可通过scp下载到本地。
+[7/20/15, 1:34:18 PM] denny: Any comment?
+#+END_EXAMPLE
+
