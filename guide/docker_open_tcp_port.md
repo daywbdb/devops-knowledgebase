@@ -1,7 +1,6 @@
 Docker open tcp to access from outside
 ======================================
-
-1. At the staging of docker container creation, we can use "-p" to do port forwarding.
+- At the staging of docker container creation, we can use "-p" to do port forwarding.
 
 In Below command, port 10001 of docker daemon server is mapping to docker container's 10001.
 
@@ -9,7 +8,7 @@ docker run -t -d --privileged -h aio --name docker-all-in-one -p 10001:10001 -p 
 
 So if port 10001 of docker daemon is accessible from outside, so is docker container's 10001 port.
 
-2. When docker container is already started and we want to export more tcp port to outside, we have to use iptables.
+- When docker container is already started and we want to export more tcp port to outside, we have to use iptables.
 
 First we find out ip of docker container. Let's say it's 172.17.0.19.
 
